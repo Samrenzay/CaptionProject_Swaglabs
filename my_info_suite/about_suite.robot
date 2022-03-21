@@ -39,11 +39,14 @@ Verify About Template
     sleep   2s
     Scroll Element Into View   xpath=//button[text()="Submit"]
     sleep   2s
-    Input Text    name="How_did_you_hear_about_Sauce_Labs__c"        fjhjkj
+    #Input Text    name="How_did_you_hear_about_Sauce_Labs__c"        fjhjkj
     #Input Text    name="Sales_Contact_Comments__c"    sagjhjkjannm
     sleep   2s
+    Click Element    xpath=//input[@id='mktoCheckbox_29478_0']
     Scroll Element Into View   xpath=//button[@class="mktoButton"]
     sleep   2s
     #Click Element    xpath=//*[@id="mktoCheckbox_29478_0"]
-    Click Element    xpath=//button[@type="submit"]
+    Click Element    xpath=//textarea[@id='How_did_you_hear_about_Sauce_Labs__c']
+    Click Element    xpath=//button[@type='submit'][normalize-space()='Submit']
+    Click            link=Submit
 
