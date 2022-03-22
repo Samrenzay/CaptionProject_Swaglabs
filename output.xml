@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220321 18:16:32.627" rpa="false" schemaversion="2">
-<suite id="s1" name="Verify Validcredential Suite" source="D:\ROBOT-SESSION\CAPTION_PROJECT\login_suite\verify_validcredential_suite.robot">
-<test id="s1-t1" name="Verify Valid Credential Test">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220322 12:00:40.040" rpa="false" schemaversion="2">
+<suite id="s1" name="Add To Cart Suite" source="D:\ROBOT-SESSION\CAPTION_PROJECT\my_info_suite\add_to_cart_suite.robot">
+<test id="s1-t1" name="TC1">
 <kw name="Launch Browser And Navigate To URL" library="CommonFunctionality" type="SETUP">
 <if>
 <branch type="IF" condition="'${BROWSER_NAME}'=='edge'">
@@ -9,111 +9,335 @@
 <arg>${driver_name}</arg>
 <arg>msedgedriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<status status="NOT RUN" starttime="20220321 18:16:33.049" endtime="20220321 18:16:33.049"/>
+<status status="NOT RUN" starttime="20220322 12:00:40.321" endtime="20220322 12:00:40.321"/>
 </kw>
-<status status="NOT RUN" starttime="20220321 18:16:33.049" endtime="20220321 18:16:33.049"/>
+<status status="NOT RUN" starttime="20220322 12:00:40.321" endtime="20220322 12:00:40.321"/>
 </branch>
 <branch type="ELSE IF" condition="'${BROWSER_NAME}'== 'ff'">
 <kw name="Set Local Variable" library="BuiltIn">
 <arg>${driver_name}</arg>
 <arg>geckodriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<status status="NOT RUN" starttime="20220321 18:16:33.049" endtime="20220321 18:16:33.049"/>
+<status status="NOT RUN" starttime="20220322 12:00:40.321" endtime="20220322 12:00:40.321"/>
 </kw>
-<status status="NOT RUN" starttime="20220321 18:16:33.049" endtime="20220321 18:16:33.049"/>
+<status status="NOT RUN" starttime="20220322 12:00:40.321" endtime="20220322 12:00:40.321"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Local Variable" library="BuiltIn">
 <arg>${driver_name}</arg>
 <arg>chromedriver.exe</arg>
 <doc>Makes a variable available everywhere within the local scope.</doc>
-<msg timestamp="20220321 18:16:33.049" level="INFO">${driver_name} = chromedriver.exe</msg>
-<status status="PASS" starttime="20220321 18:16:33.049" endtime="20220321 18:16:33.049"/>
+<msg timestamp="20220322 12:00:40.321" level="INFO">${driver_name} = chromedriver.exe</msg>
+<status status="PASS" starttime="20220322 12:00:40.321" endtime="20220322 12:00:40.321"/>
 </kw>
-<status status="PASS" starttime="20220321 18:16:33.049" endtime="20220321 18:16:33.049"/>
+<status status="PASS" starttime="20220322 12:00:40.321" endtime="20220322 12:00:40.321"/>
 </branch>
-<status status="PASS" starttime="20220321 18:16:33.049" endtime="20220321 18:16:33.049"/>
+<status status="PASS" starttime="20220322 12:00:40.321" endtime="20220322 12:00:40.321"/>
 </if>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER_NAME}</arg>
 <arg>executable_path=${EXECDIR}${/}driver${/}${driver_name}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220321 18:16:33.049" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220321 18:16:33.049" endtime="20220321 18:16:42.537"/>
+<msg timestamp="20220322 12:00:40.337" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220322 12:00:40.321" endtime="20220322 12:00:44.844"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220321 18:16:42.537" endtime="20220321 18:16:42.741"/>
+<status status="PASS" starttime="20220322 12:00:44.844" endtime="20220322 12:00:44.972"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220321 18:16:42.741" endtime="20220321 18:16:42.741"/>
+<status status="PASS" starttime="20220322 12:00:44.972" endtime="20220322 12:00:44.980"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${EXECDIR}${/}screenshot</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20220321 18:16:42.741" endtime="20220321 18:16:42.741"/>
+<status status="PASS" starttime="20220322 12:00:44.980" endtime="20220322 12:00:44.980"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220321 18:16:42.741" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
-<status status="PASS" starttime="20220321 18:16:42.741" endtime="20220321 18:16:44.445"/>
+<msg timestamp="20220322 12:00:44.980" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20220322 12:00:44.980" endtime="20220322 12:00:46.412"/>
 </kw>
-<status status="PASS" starttime="20220321 18:16:33.049" endtime="20220321 18:16:44.445"/>
+<status status="PASS" starttime="20220322 12:00:40.321" endtime="20220322 12:00:46.412"/>
 </kw>
+<kw name="Verify Add To Cart Template">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<arg>swati</arg>
+<arg>patil</arg>
+<arg>278310</arg>
+<arg>lohi</arg>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
-<arg>standard_user</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220321 18:16:44.460" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20220321 18:16:44.445" endtime="20220321 18:16:45.089"/>
+<msg timestamp="20220322 12:00:46.412" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20220322 12:00:46.412" endtime="20220322 12:00:46.823"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
-<arg>secret_sauce</arg>
+<arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220321 18:16:45.097" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20220321 18:16:45.154" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220321 18:16:45.221" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220321 18:16:45.089" endtime="20220321 18:16:45.221"/>
+<msg timestamp="20220322 12:00:46.823" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20220322 12:00:46.901" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220322 12:00:47.009" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220322 12:00:46.823" endtime="20220322 12:00:47.009"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220321 18:16:45.221" level="INFO">Clicking element 'id=login-button'.</msg>
-<status status="PASS" starttime="20220321 18:16:45.221" endtime="20220321 18:16:45.476"/>
+<msg timestamp="20220322 12:00:47.009" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20220322 12:00:47.009" endtime="20220322 12:00:47.279"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Products</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220321 18:16:45.543" level="INFO">Current page contains text 'Products'.</msg>
-<status status="PASS" starttime="20220321 18:16:45.476" endtime="20220321 18:16:45.543"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:47.279" level="INFO">Clicking element 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20220322 12:00:47.279" endtime="20220322 12:00:47.371"/>
 </kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220321 18:16:46.444" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshot/selenium-screenshot-1.png"&gt;&lt;img src="screenshot/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220321 18:16:45.543" endtime="20220321 18:16:46.444"/>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath=//select[@class="product_sort_container"]</arg>
+<arg>${filter}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220322 12:00:47.371" level="INFO">Selecting options from selection list 'xpath=//select[@class="product_sort_container"]' by value lohi.</msg>
+<status status="PASS" starttime="20220322 12:00:47.371" endtime="20220322 12:00:47.538"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="shopping_cart_container"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:47.538" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:47.538" endtime="20220322 12:00:47.634"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="checkout"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:47.642" level="INFO">Clicking element 'xpath=//*[@id="checkout"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:47.642" endtime="20220322 12:00:47.748"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="first-name"]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:47.748" level="INFO">Typing text 'swati' into text field 'xpath=//*[@id="first-name"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:47.748" endtime="20220322 12:00:47.965"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="last-name"]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:47.965" level="INFO">Typing text 'patil' into text field 'xpath=//*[@id="last-name"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:47.965" endtime="20220322 12:00:48.161"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="postal-code"]</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:48.161" level="INFO">Typing text '278310' into text field 'xpath=//*[@id="postal-code"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:48.161" endtime="20220322 12:00:48.352"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="continue"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:48.352" level="INFO">Clicking element 'xpath=//*[@id="continue"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:48.352" endtime="20220322 12:00:48.490"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="finish"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:48.490" level="INFO">Clicking element 'xpath=//*[@id="finish"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:48.490" endtime="20220322 12:00:48.709"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=back-to-products</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:48.709" level="INFO">Clicking element 'id=back-to-products'.</msg>
+<status status="PASS" starttime="20220322 12:00:48.709" endtime="20220322 12:00:48.822"/>
+</kw>
+<status status="PASS" starttime="20220322 12:00:46.412" endtime="20220322 12:00:48.822"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220321 18:16:46.444" endtime="20220321 18:16:48.848"/>
+<status status="PASS" starttime="20220322 12:00:48.830" endtime="20220322 12:00:51.286"/>
 </kw>
-<status status="PASS" starttime="20220321 18:16:33.049" endtime="20220321 18:16:48.848"/>
+<status status="PASS" starttime="20220322 12:00:40.321" endtime="20220322 12:00:51.286"/>
 </test>
-<doc>This suite will handles all the test cases related to valid
-credential test for swaglabs. Test case - TC_OH_2</doc>
-<status status="PASS" starttime="20220321 18:16:32.721" endtime="20220321 18:16:48.848"/>
+<test id="s1-t2" name="TC2">
+<kw name="Launch Browser And Navigate To URL" library="CommonFunctionality" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER_NAME}'=='edge'">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${driver_name}</arg>
+<arg>msedgedriver.exe</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<status status="NOT RUN" starttime="20220322 12:00:51.286" endtime="20220322 12:00:51.286"/>
+</kw>
+<status status="NOT RUN" starttime="20220322 12:00:51.286" endtime="20220322 12:00:51.286"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER_NAME}'== 'ff'">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${driver_name}</arg>
+<arg>geckodriver.exe</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<status status="NOT RUN" starttime="20220322 12:00:51.286" endtime="20220322 12:00:51.286"/>
+</kw>
+<status status="NOT RUN" starttime="20220322 12:00:51.286" endtime="20220322 12:00:51.286"/>
+</branch>
+<branch type="ELSE">
+<kw name="Set Local Variable" library="BuiltIn">
+<arg>${driver_name}</arg>
+<arg>chromedriver.exe</arg>
+<doc>Makes a variable available everywhere within the local scope.</doc>
+<msg timestamp="20220322 12:00:51.301" level="INFO">${driver_name} = chromedriver.exe</msg>
+<status status="PASS" starttime="20220322 12:00:51.286" endtime="20220322 12:00:51.301"/>
+</kw>
+<status status="PASS" starttime="20220322 12:00:51.286" endtime="20220322 12:00:51.301"/>
+</branch>
+<status status="PASS" starttime="20220322 12:00:51.286" endtime="20220322 12:00:51.301"/>
+</if>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER_NAME}</arg>
+<arg>executable_path=${EXECDIR}${/}driver${/}${driver_name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220322 12:00:51.301" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220322 12:00:51.301" endtime="20220322 12:00:53.750"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220322 12:00:53.750" endtime="20220322 12:00:53.900"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220322 12:00:53.900" endtime="20220322 12:00:53.909"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${EXECDIR}${/}screenshot</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20220322 12:00:53.909" endtime="20220322 12:00:53.909"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220322 12:00:53.909" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20220322 12:00:53.909" endtime="20220322 12:00:56.506"/>
+</kw>
+<status status="PASS" starttime="20220322 12:00:51.286" endtime="20220322 12:00:56.506"/>
+</kw>
+<kw name="Verify Add To Cart Template">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<arg>usha</arg>
+<arg>koti</arg>
+<arg>567201</arg>
+<arg>lohi</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:56.506" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20220322 12:00:56.506" endtime="20220322 12:00:56.609"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:56.609" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20220322 12:00:56.659" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220322 12:00:56.717" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220322 12:00:56.609" endtime="20220322 12:00:56.717"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:56.717" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20220322 12:00:56.717" endtime="20220322 12:00:56.825"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:56.825" level="INFO">Clicking element 'id=add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20220322 12:00:56.825" endtime="20220322 12:00:56.885"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath=//select[@class="product_sort_container"]</arg>
+<arg>${filter}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220322 12:00:56.885" level="INFO">Selecting options from selection list 'xpath=//select[@class="product_sort_container"]' by value lohi.</msg>
+<status status="PASS" starttime="20220322 12:00:56.885" endtime="20220322 12:00:57.029"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="shopping_cart_container"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:57.029" level="INFO">Clicking element 'xpath=//*[@id="shopping_cart_container"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:57.029" endtime="20220322 12:00:57.101"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="checkout"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:57.101" level="INFO">Clicking element 'xpath=//*[@id="checkout"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:57.101" endtime="20220322 12:00:57.181"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="first-name"]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:57.181" level="INFO">Typing text 'usha' into text field 'xpath=//*[@id="first-name"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:57.181" endtime="20220322 12:00:57.286"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="last-name"]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:57.286" level="INFO">Typing text 'koti' into text field 'xpath=//*[@id="last-name"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:57.286" endtime="20220322 12:00:57.388"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//*[@id="postal-code"]</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:57.388" level="INFO">Typing text '567201' into text field 'xpath=//*[@id="postal-code"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:57.388" endtime="20220322 12:00:57.487"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="continue"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:57.495" level="INFO">Clicking element 'xpath=//*[@id="continue"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:57.487" endtime="20220322 12:00:57.568"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="finish"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:57.568" level="INFO">Clicking element 'xpath=//*[@id="finish"]'.</msg>
+<status status="PASS" starttime="20220322 12:00:57.568" endtime="20220322 12:00:57.624"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=back-to-products</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220322 12:00:57.624" level="INFO">Clicking element 'id=back-to-products'.</msg>
+<status status="PASS" starttime="20220322 12:00:57.624" endtime="20220322 12:00:57.736"/>
+</kw>
+<status status="PASS" starttime="20220322 12:00:56.506" endtime="20220322 12:00:57.736"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220322 12:00:57.736" endtime="20220322 12:01:00.638"/>
+</kw>
+<status status="PASS" starttime="20220322 12:00:51.286" endtime="20220322 12:01:00.638"/>
+</test>
+<doc>This suite will test the add to cart details</doc>
+<status status="PASS" starttime="20220322 12:00:40.040" endtime="20220322 12:01:00.638"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Verify Validcredential Suite">Verify Validcredential Suite</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Add To Cart Suite">Add To Cart Suite</stat>
 </suite>
 </statistics>
 <errors>

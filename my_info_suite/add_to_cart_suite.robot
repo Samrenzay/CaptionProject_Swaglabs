@@ -7,17 +7,18 @@ Test Teardown       Close Browser
 
 Test Template       Verify Add TO Cart Template
 *** Test Cases ***
-TC1  standard_user       secret_sauce     sam      anu       278310
-#TC2  problem_user        secret_sauce     sanu      tanu     567201
+TC1  standard_user       secret_sauce     swati     patil       278310    lohi
+TC2  standard_user       secret_sauce     usha      koti        567201    lohi
 
 
 *** Keywords ***
 Verify Add To Cart Template
-    [Arguments]       ${username}  ${password}    ${firstname}       ${lastname}      ${zip}
+    [Arguments]       ${username}  ${password}    ${firstname}       ${lastname}      ${zip}      ${filter}
     Input Text    id=user-name    ${username}
     Input Password    id=password    ${password}
     Click Element    id=login-button
     Click Element    id=add-to-cart-sauce-labs-backpack
+    Select From List By Value    xpath=//select[@class="product_sort_container"]      ${filter}
     Click Element    xpath=//*[@id="shopping_cart_container"]
     Click Element    xpath=//*[@id="checkout"]
     Input Text    xpath=//*[@id="first-name"]    ${firstname}

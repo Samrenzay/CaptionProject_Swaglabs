@@ -2,24 +2,26 @@
 Documentation      This suite handles test case related to about details
 Resource    ../Resource/Base/CommonFunctionality.resource
 
-#Library     DataDriver      file=../test_data/data.xlsx      sheet_name=About
+Library     DataDriver      file=../test_data/data.xlsx      sheet_name=About
 
 
 Test Setup      Launch Browser And Navigate To URL
-#Test Teardown      Close Browser
+Test Teardown      Close Browser
 
 Test Template       Verify About Template
 
 
 *** Test Cases ***
-TC1     standard_user    secret_sauce    sam     anu     l&t     sm@gmail.com     2-10     India     3454565758
-
+TC1
+TC2
+#TC1     standard_user    secret_sauce    swati     patil     l&t     sp@gmail.com     2-10     India     3454565758
+#TC2     standard_user    secret_sauce    usha      koti      l&t     uk@gmail.com     2-10     India     9987656789
 
 *** Keywords ***
 Verify About Template
-    [Arguments]     ${username}     ${password}    ${firstname}    ${lastname}      ${company}     ${business_email}    ${company_size}    ${country}    ${phone_number}
+    [Arguments]     ${username}      ${firstname}    ${lastname}      ${company}     ${business_email}    ${company_size}    ${country}    ${phone_number}    ${p}
     Input Text       id=user-name    ${username}
-    Input Password   id=password    ${password}
+    Input Password   id=password     ${p}
     Click Element    id=login-button
     Page Should Contain   Products
     Capture Page Screenshot
@@ -35,18 +37,7 @@ Verify About Template
     Select From List By Value    id=Company_Size__c        ${company_size}
     Select From List By Value    id=Country               ${country}
     Input Text       xpath=//*[@id="Phone"]                 ${phone_number}
-    #Click Element    xpath=//input[@value="Mobile Testing"]
-    sleep   2s
-    Scroll Element Into View   xpath=//button[text()="Submit"]
-    sleep   2s
-    #Input Text    name="How_did_you_hear_about_Sauce_Labs__c"        fjhjkj
-    #Input Text    name="Sales_Contact_Comments__c"    sagjhjkjannm
-    sleep   2s
-    Click Element    xpath=//input[@id='mktoCheckbox_29478_0']
-    Scroll Element Into View   xpath=//button[@class="mktoButton"]
-    sleep   2s
-    #Click Element    xpath=//*[@id="mktoCheckbox_29478_0"]
-    Click Element    xpath=//textarea[@id='How_did_you_hear_about_Sauce_Labs__c']
-    Click Element    xpath=//button[@type='submit'][normalize-space()='Submit']
-    Click            link=Submit
+    Input Text       xpath=//textarea[@id='How_did_you_hear_about_Sauce_Labs__c']      mysore
+
+
 
